@@ -36,13 +36,13 @@
     }
   },
   "dependencies": {
-    "@types/node": "^20.11.30",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^4.13.0",
     "underscore": "^1.13.6"
   },
   "devDependencies": {
+    "@types/node": "^20.11.30",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@types/underscore": "^1.11.15",

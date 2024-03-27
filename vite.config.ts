@@ -26,6 +26,7 @@ export default defineConfig({
       formats: ["cjs", "es"],
     },
     rollupOptions: {
+      // 不打包到dist中
       external: [
         "react",
         "react-dom",
