@@ -1,0 +1,60 @@
+{
+  "name": "full-type-pkg",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/components/*",
+        "./*"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./client": {
+      "import": "./dist/components/client.js",
+      "require": "./dist/components/client.cjs"
+    },
+    "./shared": {
+      "import": "./dist/components/shared.js",
+      "require": "./dist/components/shared.cjs"
+    }
+  },
+  "dependencies": {
+    "@types/node": "^20.11.30",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.13.0",
+    "underscore": "^1.13.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@types/underscore": "^1.11.15",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "rollup-plugin-preserve-directives": "^0.4.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.7.3"
+  }
+}
